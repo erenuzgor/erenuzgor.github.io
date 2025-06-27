@@ -5,56 +5,84 @@
   <title>Save Walter White</title>
   <style>
     body {
-      background-color: #ffffff;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      background-color: #f4f4f4;
+      color: #333;
+      font-family: Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      color: #333;
     }
 
     .container {
-      margin: 50px auto;
-      max-width: 600px;
-      padding: 20px;
+      width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
     }
 
     img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    p.description {
+      text-align: center;
+      font-size: 18px;
+      margin: 20px 0;
     }
 
     .donate-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      font-size: 18px;
-      background-color: #0077cc;
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      padding: 15px;
+      background-color: #00AEEF;
       color: white;
+      text-align: center;
+      font-size: 18px;
       text-decoration: none;
       border-radius: 5px;
       cursor: pointer;
     }
 
     .donate-button:hover {
-      background-color: #005fa3;
+      background-color: #007bb5;
     }
 
     .thank-you {
-      margin-top: 20px;
+      display: none;
+      text-align: center;
       color: green;
       font-size: 20px;
-      font-weight: bold;
-      display: none;
+      margin-top: 15px;
     }
 
     .letter {
-      text-align: left;
       margin-top: 40px;
-      padding: 20px;
-      background-color: #f3f3f3;
-      border-radius: 10px;
+      background-color: #f9f9f9;
+      padding: 25px;
+      border-left: 4px solid #ccc;
+      font-size: 16px;
+    }
+
+    .letter p:last-child {
+      text-align: right;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -62,25 +90,27 @@
   <div class="container">
     <h1>Save Walter White</h1>
     <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png" alt="Walter White">
-    <p>Walter White is a brilliant chemist who has been diagnosed with terminal lung cancer.<br>
-    Help us raise money for his treatment.</p>
-    <button class="donate-button" onclick="showThankYou()">Donate</button>
+    <p class="description">Walter White is a brilliant chemist who has been diagnosed with terminal lung cancer. Help us raise money for his treatment.</p>
 
-    <div class="thank-you" id="thankYouMessage">Thank you for your donation!</div>
+    <div class="donate-button" onclick="showThankYou()">Donate</div>
+    <div id="thankYou" class="thank-you">Thank you for your donation!</div>
 
     <div class="letter">
-      <h3>A Letter from Skyler</h3>
       <p>
         My husband, Walter White, was diagnosed with terminal lung cancer. As a family, we are struggling emotionally and financially.
         We’re asking for your help. Walter is a good man. He deserves a chance to fight. Please consider donating.
       </p>
-      <p>— Skyler White</p>
+      <p>– Skyler White</p>
     </div>
+
+    <footer>
+      © 2008–2025 SaveWalterWhite.com – For promotional use only
+    </footer>
   </div>
 
   <script>
     function showThankYou() {
-      document.getElementById("thankYouMessage").style.display = "block";
+      document.getElementById('thankYou').style.display = 'block';
     }
   </script>
 </body>
