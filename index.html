@@ -1,13 +1,87 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eren Uzgör</title>
-  <meta name="description" content="Merhaba, hoş geldiniz.">
+  <title>Save Walter White</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      margin: 50px auto;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    .donate-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .donate-button:hover {
+      background-color: #005fa3;
+    }
+
+    .thank-you {
+      margin-top: 20px;
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .letter {
+      text-align: left;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f3f3f3;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Selam</h1>
-  <p>http://www.savewalterwhite.com/</p>
+  <div class="container">
+    <h1>Save Walter White</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png" alt="Walter White">
+    <p>Walter White is a brilliant chemist who has been diagnosed with terminal lung cancer.<br>
+    Help us raise money for his treatment.</p>
+    <button class="donate-button" onclick="showThankYou()">Donate</button>
+
+    <div class="thank-you" id="thankYouMessage">Thank you for your donation!</div>
+
+    <div class="letter">
+      <h3>A Letter from Skyler</h3>
+      <p>
+        My husband, Walter White, was diagnosed with terminal lung cancer. As a family, we are struggling emotionally and financially.
+        We’re asking for your help. Walter is a good man. He deserves a chance to fight. Please consider donating.
+      </p>
+      <p>— Skyler White</p>
+    </div>
+  </div>
+
+  <script>
+    function showThankYou() {
+      document.getElementById("thankYouMessage").style.display = "block";
+    }
+  </script>
 </body>
 </html>
